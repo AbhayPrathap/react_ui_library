@@ -13,96 +13,6 @@ A modern, accessible, and customizable React UI component library built with Typ
 - 📚 Comprehensive documentation
 - 🧪 Tested with Jest and React Testing Library
 
-## Installation
-
-```bash
-npm install @your-org/react-ui
-# or
-yarn add @your-org/react-ui
-```
-
-## Usage
-
-```tsx
-import { Button, ThemeProvider, theme } from '@your-org/react-ui';
-
-function App() {
-  return (
-    <ThemeProvider theme={theme}>
-      <Button variant="contained" color="primary">
-        Click me
-      </Button>
-    </ThemeProvider>
-  );
-}
-```
-
-## Components
-
-### Button
-
-A versatile button component with multiple variants, sizes, and colors.
-
-```tsx
-import { Button } from '@your-org/react-ui';
-
-// Contained button
-<Button variant="contained" color="primary">
-  Contained Button
-</Button>
-
-// Outlined button
-<Button variant="outlined" color="secondary">
-  Outlined Button
-</Button>
-
-// Text button
-<Button variant="text" color="primary">
-  Text Button
-</Button>
-```
-
-#### Props
-
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| variant | 'contained' \| 'outlined' \| 'text' | 'contained' | The variant to use |
-| size | 'small' \| 'medium' \| 'large' | 'medium' | The size of the button |
-| color | 'primary' \| 'secondary' \| 'error' \| 'warning' \| 'info' \| 'success' | 'primary' | The color of the button |
-| fullWidth | boolean | false | If true, the button will take up the full width of its container |
-| disabled | boolean | false | If true, the button will be disabled |
-| startIcon | ReactNode | undefined | Icon to display at the start of the button |
-| endIcon | ReactNode | undefined | Icon to display at the end of the button |
-
-## Theming
-
-The library comes with a default theme, but you can customize it to match your brand:
-
-```tsx
-import { ThemeProvider, theme } from '@your-org/react-ui';
-
-const customTheme = {
-  ...theme,
-  colors: {
-    ...theme.colors,
-    primary: {
-      main: '#your-color',
-      light: '#your-light-color',
-      dark: '#your-dark-color',
-      contrast: '#your-contrast-color',
-    },
-  },
-};
-
-function App() {
-  return (
-    <ThemeProvider theme={customTheme}>
-      {/* Your app components */}
-    </ThemeProvider>
-  );
-}
-```
-
 ## Development
 
 ### Prerequisites
@@ -114,8 +24,8 @@ function App() {
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-org/react-ui.git
-cd react-ui
+git clone https://github.com/AbhayPrathap/react_ui_library.git
+cd react_ui_library
 ```
 
 2. Install dependencies:
@@ -125,21 +35,31 @@ npm install
 yarn install
 ```
 
-3. Start Storybook:
+3. Start Storybook to view and interact with components:
 ```bash
 npm run storybook
 # or
 yarn storybook
 ```
 
+This will start the Storybook development server at `http://localhost:6006` where you can:
+- Browse all available components
+- View component documentation
+- Interact with components in different states
+- Test component variations
+- View component source code
+
 ### Available Scripts
 
-- `npm run build` - Build the library
-- `npm run test` - Run tests
+- `npm run build` - Build the library using Rollup
+- `npm run test` - Run tests with Jest
+- `npm run test:watch` - Run tests in watch mode
+- `npm run test:coverage` - Run tests with coverage report
+- `npm run test:ci` - Run tests in CI environment
 - `npm run lint` - Run ESLint
 - `npm run format` - Format code with Prettier
-- `npm run storybook` - Start Storybook
-- `npm run build-storybook` - Build Storybook
+- `npm run storybook` - Start Storybook development server
+- `npm run build-storybook` - Build Storybook for production
 
 ## Contributing
 
