@@ -1,0 +1,123 @@
+@use '../../styles/theme' as *;
+
+.button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-radius: $border-radius-sm;
+  transition: $transition-default;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-xs;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px $color-primary-light;
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
+
+.contained {
+  background-color: $color-primary-main;
+  color: $color-primary-contrast;
+  &:hover {
+    background-color: $color-primary-dark;
+  }
+}
+
+.outlined {
+  background-color: transparent;
+  color: $color-primary-main;
+  border: 1px solid $color-primary-main;
+  &:hover {
+    background-color: rgba($color-primary-main, 0.06);
+  }
+}
+
+.text {
+  background-color: transparent;
+  color: $color-primary-main;
+  &:hover {
+    background-color: rgba($color-primary-main, 0.06);
+  }
+}
+
+.small {
+  padding: $spacing-xs $spacing-sm;
+  font-size: 0.75rem;
+}
+.medium {
+  padding: $spacing-sm $spacing-md;
+  font-size: 0.875rem;
+}
+.large {
+  padding: $spacing-md $spacing-lg;
+  font-size: 1rem;
+}
+
+.primary {
+  // Already handled in .contained, .outlined, .text
+}
+.secondary {
+  background-color: $color-secondary-main;
+  color: $color-secondary-contrast;
+  &:hover {
+    background-color: $color-secondary-dark;
+  }
+}
+.error {
+  background-color: $color-error-main;
+  color: $color-error-contrast;
+  &:hover {
+    background-color: $color-error-dark;
+  }
+}
+.warning {
+  background-color: $color-warning-main;
+  color: $color-warning-contrast;
+  &:hover {
+    background-color: $color-warning-dark;
+  }
+}
+.info {
+  background-color: $color-info-main;
+  color: $color-info-contrast;
+  &:hover {
+    background-color: $color-info-dark;
+  }
+}
+.success {
+  background-color: $color-success-main;
+  color: $color-success-contrast;
+  &:hover {
+    background-color: $color-success-dark;
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.startIcon {
+  margin-right: $spacing-xs;
+  display: inline-flex;
+  align-items: center;
+}
+.endIcon {
+  margin-left: $spacing-xs;
+  display: inline-flex;
+  align-items: center;
+} 
