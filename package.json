@@ -10,6 +10,7 @@
     "dist"
   ],
   "scripts": {
+    "prebuild": "tsc --emitDeclarationOnly",
     "build": "rollup -c",
     "test": "jest",
     "test:watch": "jest --watch",
